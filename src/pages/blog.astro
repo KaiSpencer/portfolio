@@ -4,31 +4,32 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 import ContactCTA from '../components/ContactCTA.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
+import BlogPostPreview from '../components/BlogPostPreview.astro';
 import Hero from '../components/Hero.astro';
 import Grid from '../components/Grid.astro';
 
-const projects = (await getCollection('work')).sort(
+const blogPosts = (await getCollection('blog')).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
 ---
 
 <BaseLayout
-	title="My Work | Jeanine White"
-	description="Learn about Jeanine White's most recent projects"
+	title="Blog | Kai Spencer"
+	description="Kai Spencer's blog."
 >
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-8">
 			<Hero
-				title="My Work"
-				tagline="See my most recent projects below to get an idea of my past experience."
+				title="Blog"
+				tagline=""
 				align="start"
 			/>
-			<Grid variant="offset">
+
+			<Grid variant={blogPosts.length>1?"offset":undefined}>
 				{
-					projects.map((project) => (
+					blogPosts.map((blogPost) => (
 						<li>
-							<PortfolioPreview project={project} />
+							<BlogPostPreview project={blogPost} />
 						</li>
 					))
 				}

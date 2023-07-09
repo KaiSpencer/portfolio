@@ -1,14 +1,14 @@
 ---
-title: Markdown Mystery Tour
-publishDate: 2020-03-02 00:00:00
-img: /assets/stock-1.jpg
-img_alt: Iridescent ripples of a bright blue and pink liquid
+title: Clerk meets Playwright
+publishDate: 2023-07-09 
+img: /assets/blog/clerk-playwright.jpg
+img_alt: Clerk and Playwright logo's on canvas
 description: |
-  We designed a whodunnit-style game to introduce Markdown formatting. Suspense — suspicion — syntax!
+  Authentication is hard, Clerk makes it easy. Let's see how Clerk and Playwright can work together to make testing your application a breeze.
 tags:
-  - Design
-  - Dev
-  - User Testing
+  - Automated Testing
+  - Clerk
+  - Playwright
 ---
 
 ## Level-two heading
